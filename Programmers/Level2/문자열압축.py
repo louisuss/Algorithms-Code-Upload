@@ -62,18 +62,7 @@ def solution(s):
 
 
 # def solution(text):
+# [len(text)] -> text 길이가 1,2,3 인 경우 예외 때문에 입력해야함.
 #     return min(compress(text, tok_len) for tok_len in list(range(1, int(len(text)/2) + 1)) + [len(text)])
 
 
-# a = [
-#     "aabbaccc",
-#     "ababcdcdababcdcd",
-#     "abcabcdede",
-#     "abcabcabcabcdededededede",
-#     "xababcdcdababcdcd",
-
-#     'aaaaaa',
-# ]
-
-# for x in a:
-#     print(solution(x))
