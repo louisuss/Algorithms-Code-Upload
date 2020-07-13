@@ -1,5 +1,5 @@
-str = '3abcd '
 
-for i in str:
-    if i in '[0-9]+':
-        print(i)
+b = [1 for _ in range(5)]
+c = [1]*5
+print(b)
+print(c)
