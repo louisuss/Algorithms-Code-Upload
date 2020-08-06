@@ -7,6 +7,7 @@ for _ in range(m):
     x, y = map(int, input().split())
     adj[y].append(x)
 
+
 def bfs(v):
     q = deque([v])
     visited = [False] * (n+1)
@@ -20,6 +21,7 @@ def bfs(v):
                 visited[e] = True
                 count += 1
     return count
+
 
 result = []
 max_value = -1

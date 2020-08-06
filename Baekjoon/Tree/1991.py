@@ -1,27 +1,34 @@
 N = int(input())
 tree = {}
 
+
 class Node:
     def __init__(self, data, left_node, right_node):
         self.data = data
         self.left_node = left_node
         self.right_node = right_node
 
+
 def pre_order(node):
+    # 루트 왼 오
     print(node.data, end='')
     if node.left_node != '.':
         pre_order(tree[node.left_node])
     if node.right_node != '.':
         pre_order(tree[node.right_node])
 
+
 def in_order(node):
+    # 왼 루트 오
     if node.left_node != '.':
         in_order(tree[node.left_node])
     print(node.data, end='')
     if node.right_node != '.':
         in_order(tree[node.right_node])
 
+
 def post_order(node):
+    # 왼 오 루
     if node.left_node != '.':
         post_order(tree[node.left_node])
     if node.right_node != '.':

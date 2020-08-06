@@ -1,5 +1,4 @@
 import math
-import sys
 
 t = int(input())
 results = []
@@ -20,4 +19,4 @@ for _ in range(t):
     results.append(res)
 
 for result in results:
-    sys.stdout.write(str(result)+'\n')
+    print(result)

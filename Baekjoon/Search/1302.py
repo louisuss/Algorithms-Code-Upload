@@ -30,3 +30,21 @@ for book, number in count.items():
     if number == target:
         arr.append(book)
 print(sorted(arr)[0])
+
+
+# n = int(input())
+# books = []
+# for _ in range(n):
+#     books.append(input())
+
+# top_books = []
+# # 숫자 세기
+# books = Counter(books)
+# m = max(books.values())
+# for book in books:
+#     # book = key
+#     # 가장 많은 것 리스트에 담기
+#     if books[book] == m:
+#         top_books.append(book)
+
+# print(sorted(top_books)[0])

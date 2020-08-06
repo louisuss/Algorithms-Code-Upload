@@ -11,10 +11,12 @@ for i in range(n):
 result = 0
 
 while len(heap) != 1:
+    # 최소값 2개
     a = heapq.heappop(heap)
     b = heapq.heappop(heap)
     sum = a + b
     result += sum
+    # 최소값 더한 값 힙에 넣음
     heapq.heappush(heap, sum)
 
 print(result)

@@ -1,4 +1,4 @@
-n, m = map(int,input().split())
+n, m = map(int, input().split())
 
 arr = []
 
@@ -23,6 +23,18 @@ for j in range(m):
     if col[j] == 0:
         col_count += 1
 print(max(row_count, col_count))
+
+# Solution2
+# n, m = map(int, input().split())
+# field = [list(input()) for _ in range(n)]
+# row, col = [0]*n, [0]*m
+
+# for i in range(n):
+#     for j in range(m):
+#         if field[i][j] == 'X':
+#             row[i], col[j] = 1, 1
+# print(max(row.count(0), col.count(0)))
+
 # N, M = map(int, input().split())
 # lis = []
 # for _ in range(N):

@@ -6,17 +6,24 @@ b, ck = [], []
 
 # Flood Fill
 # 전체 탐색하고 탐색한 곳을 다시 탐색하지 않는 것이 핵심
-dx, dy = [1,0,-1,0], [0,1,0,-1]
+dx, dy = [1, 0, -1, 0], [0, 1, 0, -1]
+
+
 def dfs(x, y):
     global b, ck
+    # ck 된 경우 종료
     if ck[x][y] == 1:
         return
+    # 지난 경로 체크
     ck[x][y] = 1
     for i in range(4):
         xx, yy = x + dx[i], y + dy[i]
+        # 배추 없거나 체크 안되있으면 통과
         if b[xx][yy] == 0 or ck[xx][yy]:
             continue
+        # 배추가 있거나 체크 안되어 있으면 새로운 경로 실행
         dfs(xx, yy)
+
 
 def process():
     global b, ck
@@ -29,12 +36,13 @@ def process():
         b[y+1][x+1] = 1
 
     ans = 0
-    for i in range(1,n+1):
+    for i in range(1, n+1):
         for j in range(1, m+1):
             if b[i][j] == 0 or ck[i][j]:
                 continue
-            dfs(i,j)
+            dfs(i, j)
             ans += 1
+    
     print(ans)
 
 
@@ -80,4 +88,3 @@ for _ in range(t):
 #         adj[y].append(x)
 #
 # def dfs()
-

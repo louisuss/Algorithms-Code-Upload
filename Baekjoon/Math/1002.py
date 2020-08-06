@@ -7,22 +7,23 @@ for _ in range(t):
     r_d1 = abs(r2 - r1)
     r_d2 = r1 + r2
 
+    # 중심점이 같은 경우
     if xy_d == 0:
+        # 무한
         if r1 == r2:
             print(-1)
+        # 0개
         else:
             print(0)
+    # 중심점이 다른 경우
     else:
+        # 외접 내접
         if xy_d == r_d1 or xy_d == r_d2:
             print(1)
         elif xy_d < r_d1 or xy_d > r_d2:
             print(2)
         else:
             print(0)
-
-
-
-
 
 
 # from math import sqrt
