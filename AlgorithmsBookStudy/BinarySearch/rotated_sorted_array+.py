@@ -8,14 +8,23 @@ def search(nums, target):
     left, right = 0, len(nums)-1
     while left < right:
         mid = left + (right-left)//2
+
         if nums[mid] > nums[right]:
             left = mid + 1
         else:
             right = mid
-        print(left, right, mid)
     pivot = left
 
-nums = [4,5,8,1,2,3,6,7]
-target = 1
+    # 피봇 기준 이진 검색
+    left, right = 0, len(nums)-1
+    while left <= right:
+        mid = left + (right-left)//2
+        mid_pivot = (mid+pivot) % len(nums)
 
-search(nums,target)
+        if nums[mid_pivot] < target:
+            left = mid+1
+        elif nums[mid_pivot] > target:
+            right = mid - 1
+        else:
+            return mid_pivot
+    return -1
