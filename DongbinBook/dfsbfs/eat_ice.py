@@ -21,3 +21,27 @@ for i in range(n):
             count += 1
 
 print(count)
+
+# n, m = map(int, input().split())
+# board = [list(map(int, list(input()))) for _ in range(n)]
+# dirs = [(1, 0), (0, 1), (-1, 0), (0, -1)]
+
+
+# def dfs(r, c):
+#     board[r][c] = 1
+#     for dr, dc in dirs:
+#         nr, nc = dr+r, dc+c
+#         if 0 <= nr < n and 0 <= nc < m:
+#             if not board[nr][nc]:
+#                 dfs(nr, nc)
+
+
+# cnt = 0
+# for i in range(n):
+#     for j in range(m):
+#         if not board[i][j]:
+#             dfs(i, j)
+#             cnt += 1
+
+# print(cnt)
+# print(board)
