@@ -1,6 +1,6 @@
-total = []
+import bisect
 
-if total:
-    print(1)
-else:
-    print(2)
+i = [1, 1, 2, 3, 3]
+
+print(bisect.bisect_left(i, 2))
+print(bisect.bisect_right(i, 2))
