@@ -1,6 +1,13 @@
-import bisect
+from bisect import bisect_left, bisect_right
 
-i = [1, 1, 2, 3, 3]
 
-print(bisect.bisect_left(i, 2))
-print(bisect.bisect_right(i, 2))
+def count_by_range(a, left_val, right_val):
+    right_idx = bisect_right(a, right_val)
+    print(right_idx)
+    left_idx = bisect_left(a, left_val)
+    print(left_idx)
+    return right_idx - left_idx
+arr = ["frame", "frodo", "front", "frost", "kakao"]
+i = "fro??"
+res = count_by_range(arr, i.replace('?', 'a'), i.replace('?', 'z'))
+print(res)
