@@ -1,23 +1,20 @@
 import heapq
 
+lst = [[1, 4, 5], [1, 3, 4], [2, 6]]
 
-def merge_lists(self, lists):
-    root = result = lists(None)
+
+def merge_list(lists):
+    result = []
     heap = []
+    for idx, lst in enumerate(lists):
+        for val in lst:
+            heapq.heappush(heap, (val, idx))
 
-    # 각 연결 리스트의 루트를 힘에 저장
-    for i in range(len(lists)):
-        if lists[i]:
-            heapq.heappush(heap, (lists[i].val. i, lists[i]))
-
-    # 힙 추출 이후 다음 노드는 다시 저장
     while heap:
-        node = heapq.heappop(heap)
-        idx = node[1]
-        result.next = node[2]
+        val = heapq.heappop(heap)
+        result.append(val[0])
 
-        result = result.next
-        if result.next:
-            heapq.heappush(heap, (result.next.val, idx, result.next))
+    print('->'.join(map(str, result)))
 
-    return root.next
+
+merge_list(lst)

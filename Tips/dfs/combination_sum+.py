@@ -2,6 +2,7 @@ result = []
 candidates = list(map(int, input().split()))
 target = int(input())
 
+
 def dfs(csum, idx, path):
     if csum < 0:
         return
@@ -11,5 +12,6 @@ def dfs(csum, idx, path):
     for i in range(idx, len(candidates)):
         dfs(csum-candidates[i], i, path + [candidates[i]])
 
-dfs(target,0,[])
+
+dfs(target, 0, [])
 print(result)
