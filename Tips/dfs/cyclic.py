@@ -28,6 +28,8 @@ def can_finish(num_course, prerequisites):
 
         # 탐색 종료 후 순환 노드 삭제
         traced.remove(i)
+        # 탐색 종료 후 방문 노드 추가
+        visited.add(i)
 
         return True
 

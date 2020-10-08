@@ -18,17 +18,15 @@ class Trie:
     def insert(self, strs):
         current_node = self.head
         for char in strs:
-            # 가능한 글자 개수 증가
-            current_node.possible_word += 1
             if char not in current_node.children:
                 # 다음 문자 등록
                 current_node.children[char] = Node(char)
 
             # 다음 노드로 이동
             current_node = current_node.children[char]
+            # 가능한 글자 개수 증가
+            current_node.possible_word += 1
 
-        # 마지막 글자 가능 글자수 증가
-        current_node.possible_word += 1
         # 마지막 글자 -> 해당 trie 최종 문자를 저장
         current_node.data = strs
 
@@ -89,3 +87,6 @@ def solution(words):
         if not already_find:
             cnt += len(word)
     return cnt
+
+
+print(solution(["banana", "go", "gone", "bandana"]))
