@@ -36,4 +36,4 @@ def comb_sum(candidates, target):
     return result
 
 
-print(comb_sum([2, 2,3, 6, 7], 7))
+print(comb_sum([2, 2, 3, 6, 7], 7))

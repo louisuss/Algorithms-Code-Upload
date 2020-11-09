@@ -1,6 +1,6 @@
-str = "abcd"
+from collections import defaultdict
 
-str = str[:0] + str[4:]
-print(str)
-a = "1+2+43"
-print(eval(a))
+a = defaultdict(bool)
+
+a[0] = 1
+print(a[0])

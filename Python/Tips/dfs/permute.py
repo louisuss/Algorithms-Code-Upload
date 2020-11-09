@@ -10,7 +10,7 @@ def permute(nums):
 
         for e in elements:
             next_elem = elements[:]
-            # e = 봅힌 원소
+            # e = 뽑힌 원소
             # 뽑힌 원소 삭제한 리스트
             next_elem.remove(e)
 
@@ -30,7 +30,6 @@ print(permute(nums))
 
 def solutions(lst, k):
     result = []
-
     prev_lst = []
 
     def dfs(lst, k):
@@ -39,9 +38,9 @@ def solutions(lst, k):
             return
 
         for val in lst:
+            prev_lst.append(val)
             next_lst = lst[:]
             next_lst.remove(val)
-            prev_lst.append(val)
             dfs(next_lst, k)
             prev_lst.pop()
     dfs(lst, k)
@@ -49,4 +48,4 @@ def solutions(lst, k):
     return result
 
 
-print(solutions([1,2,3], 3))
+print(solutions([1, 2, 3], 3))

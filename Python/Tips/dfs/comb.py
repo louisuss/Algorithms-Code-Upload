@@ -23,7 +23,6 @@ print(comb(4, 2))
 
 def solutions(lst, k):
     result = []
-
     prev_lst = []
 
     def dfs(lst, k):
@@ -31,11 +30,11 @@ def solutions(lst, k):
             result.append(prev_lst[:])
             return
 
+        # permute와 달리 for 문 밖으로 나옴
         next_lst = lst[:]
-
         for val in lst:
-            next_lst.remove(val)
             prev_lst.append(val)
+            next_lst.remove(val)
             dfs(next_lst, k)
             prev_lst.pop()
     dfs(lst, k)
